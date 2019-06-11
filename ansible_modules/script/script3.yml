@@ -1,0 +1,8 @@
+- name: This is our first play
+  hosts: webserver1
+  tasks:
+    - name: "Run a test script on webserver"
+      script: test_script.sh Mohit removes=/tmp/mohit.txt chdir=/home
+
+# In this, script module will run only when mohit.txt file is there on the target machine in /tmp
+

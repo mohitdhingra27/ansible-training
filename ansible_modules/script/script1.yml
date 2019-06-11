@@ -1,0 +1,6 @@
+- name: This is our first play
+  hosts: webserver1
+  tasks:
+    - name: "copy a dummy file on webserver"
+      script: test_script.sh Mohit
+

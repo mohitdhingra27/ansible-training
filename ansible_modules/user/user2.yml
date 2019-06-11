@@ -1,0 +1,7 @@
+- name: This is our first play
+  hosts: webserver1
+  tasks:
+    - name: "creat a new user on the machine"
+      user:
+         name: mytestuser2
+         state: absent

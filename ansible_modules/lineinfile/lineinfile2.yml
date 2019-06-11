@@ -2,4 +2,6 @@
   hosts: webserver1
   tasks:
     - name: "create a dummy file on webserver1"
-      shell: echo "8.8.8.8" | tee -a /tmp/resolve.conf 
+      lineinfile:
+         path: /tmp/test.txt
+         line: "8.8.8.8" 

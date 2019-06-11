@@ -1,0 +1,10 @@
+- name: This is our first play
+  hosts: webserver1
+  vars:
+    servicename: httpd
+
+  tasks:
+    - name: "Install httpd service using variable name"
+      yum:
+        name: "{{ servicename }}"
+        state: present

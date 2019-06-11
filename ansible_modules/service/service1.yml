@@ -1,0 +1,7 @@
+- name: This is our first play
+  hosts: webserver1
+  tasks:
+    - name: "start/stop nginx service"
+      service:
+         name: nginx
+         state: started #stopped #restarted
