@@ -1,0 +1,14 @@
+- name: This is our first play
+  hosts: webserver1
+  tasks:
+    - name: "create a dummy file on webserver1"
+      command: touch /tmp/ansible_dummy.txt
+
+- name: This is our second play
+  hosts: web_database_servers
+  tasks:
+    - name: "creating directory in tmp directory"
+      command: mkdir /tmp/mySecondPlayDir
+
+    - name: "create a dummy file in database and webserver"
+      command: touch /tmp/mySecondPlayDir/secondPlay.txt

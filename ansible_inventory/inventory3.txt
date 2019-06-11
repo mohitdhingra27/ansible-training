@@ -1,0 +1,10 @@
+webserver1 ansible_host=172.19.0.3 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver2 ansible_host=172.19.0.4 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver3 ansible_host=172.19.0.5 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver4 ansible_host=172.19.0.6 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver5 ansible_host=172.19.0.7 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver6 ansible_host=172.19.0.8 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver7 ansible_host=172.19.0.9 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver8 ansible_host=172.19.0.10 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver9 ansible_host=172.19.0.11 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver10 ansible_host=172.19.0.12 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root

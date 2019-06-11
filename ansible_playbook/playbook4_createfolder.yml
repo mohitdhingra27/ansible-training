@@ -1,0 +1,5 @@
+- name: This is our first play
+  hosts: sqlserver1
+  tasks:
+    - name: "create a dummy directroy on database server"
+      command: mkdir -p /tmp/ansible_dummy_dir

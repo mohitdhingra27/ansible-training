@@ -1,0 +1,11 @@
+- name: This is our first play
+  hosts: webserver1
+  tasks:
+    - name: "copy a dummy file on webserver"
+      copy:
+         src: abc.txt
+         dest: /tmp
+
+   # Above mentioned task can be written like below as well.
+   # - name: "copy a dummy file on webserver"
+   #   copy: src=abc.txt dest=/tmp

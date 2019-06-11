@@ -1,0 +1,36 @@
+webserver1 ansible_host=172.19.0.3 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver2 ansible_host=172.19.0.4 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver3 ansible_host=172.19.0.5 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver4 ansible_host=172.19.0.6 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver5 ansible_host=172.19.0.7 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+sqlserver1 ansible_host=172.19.0.8 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+sqlserver2 ansible_host=172.19.0.9 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+sqlserver3 ansible_host=172.19.0.10 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+sqlserver4 ansible_host=172.19.0.11 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+sqlserver5 ansible_host=172.19.0.12 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+nfsserver1 ansible_host=172.19.0.13 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+nfsserver2 ansible_host=172.19.0.14 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+nfsserver3 ansible_host=172.19.0.15 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+nfsserver4 ansible_host=172.19.0.16 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+nfsserver5 ansible_host=172.19.0.17 ansible_ssh_pass=mannu88* ansible_connection=ssh ansible_port=22 ansible_user=root
+
+[webservers]
+webserver1
+webserver2
+webserver3
+webserver4
+webserver5
+
+[databaseservers]
+sqlserver1
+sqlserver2
+sqlserver3
+sqlserver4
+sqlserver5
+
+[nfsservers]
+nfsserver[1:5]
+
+[nfs_database_servers:children]
+nfsservers
+databaseservers

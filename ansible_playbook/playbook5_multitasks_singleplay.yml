@@ -1,0 +1,8 @@
+- name: This is our first play
+  hosts: webserver1
+  tasks:
+    - name: "creating directory in tmp directory"
+      command: mkdir /tmp/ansible_dummy_1
+
+    - name: "create a dummy file in webserver"
+      command: touch /tmp/ansible_dummy_1/dummyfile.txt
