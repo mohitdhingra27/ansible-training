@@ -1,0 +1,13 @@
+- name: This is our first play
+  hosts: sqlserver1
+  vars:
+    pkg:
+      - vsftpd
+      - tree
+
+  tasks:
+    - name: "installing packages from a loop"
+      yum: 
+         name: "{{ item }}"
+         state: present
+      with_items: "{{ pkg }}"

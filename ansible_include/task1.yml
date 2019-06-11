@@ -1,0 +1,19 @@
+# lets suppose these tasks are related to webservers
+
+- name: "task 1"
+  command: touch /tmp/{{ var1 }}.txt
+
+- name: "task 2"
+  command: touch /tmp/{{ var2 }}.txt
+
+- name: "task 3"
+  command: touch /tmp/{{ var3 }}.txt
+
+- name: "task 4"
+  command: touch /tmp/{{ var4 }}.txt
+
+- name: "task 5"
+  command: touch /tmp/{{ var5 }}.txt
+
+- name: "task 6"
+  command: touch /tmp/{{ var6 }}.txt

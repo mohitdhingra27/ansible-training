@@ -1,0 +1,7 @@
+- name: this is first play
+  hosts: webserver1
+  vars_files:
+     - variables.yml
+
+  tasks:
+     - include_tasks: task.yml

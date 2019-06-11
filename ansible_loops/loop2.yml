@@ -1,0 +1,10 @@
+- name: This is our first play
+  hosts: sqlserver1
+  tasks:
+    - name: "installing packages from a loop"
+      yum: 
+        name: "{{ item }}"
+        state: present
+      with_items:
+         - nginx
+         - tree
