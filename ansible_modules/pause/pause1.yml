@@ -1,0 +1,6 @@
+- name: This is our first play
+  hosts: webserver1
+  tasks:
+    - name: Pause our playbook for 10 seconds
+      pause:
+        seconds: 10

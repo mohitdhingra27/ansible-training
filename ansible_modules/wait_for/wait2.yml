@@ -1,0 +1,6 @@
+- name: This is first play
+  hosts: webserver1
+  tasks:
+    - name: Wait until /tmp/all_done.txt exists on the webserver
+      wait_for:
+        path: /tmp/all_done.txt
