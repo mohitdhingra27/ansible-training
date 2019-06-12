@@ -1,0 +1,6 @@
+- name: This is our first play
+  hosts: webserver1
+  tasks:
+# create /tmp/new.txt file as root user first on the webserver1
+    - name: "add entry in a dummy file on webserver1"
+      lineinfile: dest=/tmp/new.txt line="GIOM"

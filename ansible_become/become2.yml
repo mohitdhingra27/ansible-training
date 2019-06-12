@@ -1,0 +1,8 @@
+- name: This is our first play
+  hosts: webserver1
+  become: true
+  become_user: root
+  become_method: su
+  tasks:
+    - name: "create a dummy file on webserver1"
+      lineinfile: dest=/tmp/new.txt line="GIOM"

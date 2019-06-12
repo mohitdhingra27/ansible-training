@@ -1,0 +1,7 @@
+- name: This is first play
+  hosts: webserver1
+  vars:
+     ansible_ssh_pass: "{{ lookup('csvfile', 'webserver1 file=credentials.csv delimeter=,') }}"
+  tasks:
+    - name: "craete a dummy file on webserver"
+      file: path=/tmp/csv_lookups.txt
