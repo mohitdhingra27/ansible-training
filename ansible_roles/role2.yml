@@ -1,0 +1,18 @@
+- name: This is our first play
+  hosts: webserver1
+  roles:
+     - php
+     - httpd
+
+- name: This is our second play
+  hosts: sqlserver1
+  roles:
+     - postgresql
+
+# Below mentioned is just an example which shows if there is a server which will act as both web and database server, then we can install all three packages on it using the roles.
+#- name: This is our third play
+#  hosts: web_sql_server
+#  roles:
+#     - php
+#     - httpd
+#     - postgresql

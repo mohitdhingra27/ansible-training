@@ -1,0 +1,2 @@
+- name: "Install httpd on the webserver"
+  yum: name=httpd state=present

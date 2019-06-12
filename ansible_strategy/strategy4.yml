@@ -1,0 +1,12 @@
+- name: This is our first play
+  hosts: webserver1,sqlserver1
+  serial: 1
+  tasks:
+    - name: "first task"
+      yum: name=php state=present
+
+    - name: "second task"
+      command: touch /tmp/strategy_task2.txt
+
+    - name: "third task"
+      command: sleep 30

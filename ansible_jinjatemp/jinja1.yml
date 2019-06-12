@@ -1,0 +1,52 @@
+- name: This is our first play
+  hosts: webserver1
+  vars:
+     your_name: Mohit
+     dummy_list1:
+        - 1
+        - 10
+        - 20
+        - 30
+        - 10
+     dummy_list2:
+        - 30
+        - 40
+        - 10
+        - 50
+
+  tasks:
+    - debug:
+         msg: "Hello World"
+
+    - debug:
+         msg: "Hello {{ your_name }}"
+
+    - debug:
+         msg: "Hello {{ your_name | upper }}"
+
+    - debug:
+         msg: "Hello {{ your_name | lower }}"
+
+    - debug:
+         msg: "Hello {{ your_name | replace('Mohit','Rohit') }}"
+
+    - debug:
+         msg: "{{ dummy_list1 | min }}"
+
+    - debug:
+         msg: "{{ dummy_list1 | max }}"
+
+    - debug:
+         msg: "{{ dummy_list1 | unique }}"
+
+    - debug:
+         msg: "{{ dummy_list1 | union(dummy_list2) }}"
+
+    - debug:
+         msg: "{{ dummy_list1 | intersect(dummy_list2) }}"
+
+    - debug:
+         msg: "{{ 100 | random }}"
+
+    - debug:
+         msg: "{{ '/etc/ansible/ansible.cfg' | basename }}"

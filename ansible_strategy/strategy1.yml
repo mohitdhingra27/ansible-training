@@ -1,0 +1,9 @@
+- name: This is our first play
+  hosts: webserver1,sqlserver1
+  strategy: linear  #This is default strategy.This will make sure that the first task runs on both the servers, only then the execution of the second task will start
+  tasks:
+    - name: "Install php on the webserver"
+      yum: name=php state=present
+
+    - name: "Install httpd on the webserver"
+      yum: name=httpd state=present

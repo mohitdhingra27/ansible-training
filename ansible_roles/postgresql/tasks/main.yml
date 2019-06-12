@@ -1,0 +1,2 @@
+- name: "Install postgresql on the sqlserver"
+  yum: name=postgresql state=present
