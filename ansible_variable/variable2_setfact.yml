@@ -1,0 +1,11 @@
+- name: This is our first play
+  hosts: webserver1
+  tasks:
+
+    - name: "set a fact"
+      set_fact:
+          our_fact: "Ansible Rocks!"
+
+    - name: "show custom fact"
+      debug:
+          msg: "{{ our_fact }}"
