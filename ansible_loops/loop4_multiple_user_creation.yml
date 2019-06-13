@@ -1,0 +1,11 @@
+- name: this is first play
+  hosts: webserver1
+  tasks:
+    - name: Creating user
+      user:
+        name: "{{ item }}"
+      with_items: 
+        - james
+        - hayley
+        - lily
+        - anwen

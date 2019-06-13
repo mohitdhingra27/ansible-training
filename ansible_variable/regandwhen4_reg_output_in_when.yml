@@ -1,0 +1,32 @@
+- name: This is first play
+  hosts: webserver1
+  tasks:
+
+     - name: change artifactory.log permissions
+       file:
+          path: /var/opt/jfrog/artifactory/logs/artifactory.log
+          owner: artifactory
+          group: artifactory
+          mode: 0644
+       register: a
+
+     - name: change catalina.out permissions
+       file:
+          path: /var/opt/jfrog/artifactory/logs/catalina/catalina.out
+          owner: artifactory
+          group: artifactory
+          mode: 0644
+       register: b
+
+     - name: change logs directory ownership and add a sticky bit at group level
+       file:
+          path: /var/opt/jfrog/artifactory/logs
+          owner: artifactory
+          group: logstash
+          mode: u=rwx,g=rx,o=rx,g+s
+          state: directory
+       register: c
+
+     - name: restart logstash
+       service: name=logstash state=restarted
+       when: a.changed or b.changed or c.changed

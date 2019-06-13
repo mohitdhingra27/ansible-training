@@ -1,0 +1,1 @@
+ansible-vault encrypt_string "password_value"

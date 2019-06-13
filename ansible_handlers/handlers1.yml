@@ -1,0 +1,24 @@
+- name: this is first play
+  hosts: webserver1
+
+  tasks: 
+    - name: Install Nginx
+      yum: name=nginx state=present
+
+      notify: restart nginx
+
+    
+    - name: Configure nginx configuration file
+      copy:
+         src: /tmp/nginx.conf
+         dest: /etc/nginx/nginx.conf
+         owner: root
+         backup: yes
+         group: root
+         mode: 0775
+
+      notify: restart nginx
+
+  handlers:
+    - name: restart nginx
+      service: name=nginx state=restarted

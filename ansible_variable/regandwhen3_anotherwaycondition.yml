@@ -1,0 +1,13 @@
+- name: This is first play
+  hosts: webserver1
+  tasks:
+    - name: Exploring register
+      command: hostname -s
+      when: 
+        - ansible_distribution == "CentOS" 
+        - ansible_distribution_major_version | int >= 7
+      register: command_register
+
+    - name: Show register
+      debug:
+        var: command_register

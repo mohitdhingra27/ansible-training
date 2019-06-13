@@ -1,0 +1,14 @@
+- name: this is first play
+  hosts: webserver1
+  tasks:
+    - name: Exploring register
+      command: hostname -s
+      register: hostname_output
+
+    - name: Show hostname_output as registered context
+      debug:
+        var: hostname_output
+
+    - name: Show hostname_output as jinja2
+      debug:
+        msg: "{{ hostname_output }}"
