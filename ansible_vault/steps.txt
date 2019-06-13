@@ -1,1 +1,2 @@
 ansible-vault encrypt_string "password_value"
+https://serversforhackers.com/c/how-ansible-vault-works
