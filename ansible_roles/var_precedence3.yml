@@ -1,0 +1,11 @@
+- name: this is first play
+  hosts: webserver1
+  vars:
+    package_version: 1.2
+  roles:
+    - vars_testing
+
+  tasks:
+    - name: print package_version variable value
+      debug:
+         msg: "{{ package_version }}"

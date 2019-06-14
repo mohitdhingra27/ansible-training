@@ -1,5 +1,5 @@
 - name: This is our first play
   hosts: webserver1
   tasks:
-    - name: "create a dummy file on webserver1"
+    - name: "add an entry in /tmp/resolve.conf file"
       shell: echo "8.8.8.8" | tee -a /tmp/resolve.conf 

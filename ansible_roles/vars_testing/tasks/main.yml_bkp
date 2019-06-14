@@ -1,0 +1,2 @@
+- name: "Install php on the webserver"
+  yum: name=php state=present

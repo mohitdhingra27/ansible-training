@@ -1,0 +1,7 @@
+- name: this is first play
+  hosts: webserver1
+  tasks:
+    - name: Install tree package on webserver
+      yum:
+        name: tree
+        state: present 
